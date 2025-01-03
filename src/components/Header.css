@@ -1,0 +1,35 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #09343db9, #387fa5a0);
+}
+
+nav .title img{
+    width: 6.5rem;
+    height: 6.5rem;
+    margin: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;;
+    border-radius: 0.5rem;
+}
+
+img{
+    width: 100%;
+}
