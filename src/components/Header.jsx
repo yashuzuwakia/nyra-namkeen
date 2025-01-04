@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Header.css";
-import cover from "../assets/images/homehead1.png";
 import logo from "../assets/images/logo.png";
 import { Link } from "react-router-dom";
 
@@ -14,7 +13,7 @@ const Header = () => {
   return (
     <header className="header">
       <nav className="nav">
-        <Link to="/home" className="title">
+        <Link to="/" className="title">
           <img src={logo} alt="Nyra Namkeen" className="logo" />
         </Link>
         <button className="menu-toggle" onClick={toggleMenu}>
@@ -32,9 +31,6 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <div>
-        <img src={cover} alt="Home Cover" />
-      </div>
     </header>
   );
 };
