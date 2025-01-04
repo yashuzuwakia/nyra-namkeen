@@ -6,6 +6,7 @@
     height: 100vh; /* Full viewport height */
     text-align: center; /* Center text */
     background-color: #f1f1f1; /* Optional: change background color */
+    margin-top: -25px;
   }
   
   .logo {
@@ -34,3 +35,17 @@
   }
   
 
+/* Smaller logo on mobile screens */
+@media (max-width: 786px) {
+    .home{
+        margin-top: -88px;
+    }
+  }
+
+  
+/* Smaller logo on mobile screens */
+@media (max-width: 480px) {
+    .home{
+        margin-top: -116px;
+    }
+  }
