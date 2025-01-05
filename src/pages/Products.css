@@ -1,6 +1,6 @@
 /* Main container styles */
 .single-product-container {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 2rem auto;
     padding: 1.5rem;
     background: #f9f9f9;
@@ -19,16 +19,20 @@
   
   /* Product details layout */
   .product-details {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
     align-items: center;
-    gap: 2rem;
   }
   
   /* Product image */
+  .product-image-container {
+    text-align: center;
+  }
+  
   .product-image {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -36,18 +40,16 @@
   
   /* Product information */
   .product-info {
-    max-width: 400px;
     text-align: left;
+    padding: 1rem;
   }
   
-  /* Product name */
   .product-name {
     font-size: 2rem;
     color: #09343d;
     margin-bottom: 1rem;
   }
   
-  /* Product description */
   .product-description {
     font-size: 1.1rem;
     color: #555;
@@ -55,7 +57,6 @@
     line-height: 1.5;
   }
   
-  /* Product price */
   .product-price {
     font-size: 1.5rem;
     font-weight: bold;
@@ -63,27 +64,21 @@
     margin-bottom: 1.5rem;
   }
   
-  /* Buy Now button */
-  .buy-now-button {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background: #09343d;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .buy-now-button:hover {
-    background: #387fa5;
+  /* 3D Model container */
+  .product-model-container {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
   /* Responsive layout */
   @media (max-width: 768px) {
     .product-details {
-      flex-direction: column;
+      grid-template-columns: 1fr;
+      gap: 1rem;
     }
   
     .product-image {
@@ -92,6 +87,10 @@
   
     .product-info {
       text-align: center;
+    }
+  
+    .product-model-container {
+      height: 300px;
     }
   }
   
