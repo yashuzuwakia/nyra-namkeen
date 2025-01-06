@@ -31,7 +31,7 @@ export default function Footer() {
         <div className="footer-section contact">
           <h3>Contact</h3>
           <p><FaMapMarkerAlt /> Jehanabad, Bihar, India</p>
-          <p><FaEnvelope /> support@nyranamkeen.com</p>
+          <p><FaEnvelope /> nyranamkeen@gmail.com</p>
         </div>
       </div>
       <div className="footer-bottom">

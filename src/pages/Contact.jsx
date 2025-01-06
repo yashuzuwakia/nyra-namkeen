@@ -49,7 +49,7 @@ export default function Contact() {
         {/* Contact Details */}
         <div className="contact-section">
           <h2>Contact Details</h2>
-          <p>📞 Phone: +91 9876543210</p>
+          <p>📞 Phone: +91 7050273011</p>
           <p>✉️ Email: nyranamkeen@gmail.com</p>
         </div>
       </div>
