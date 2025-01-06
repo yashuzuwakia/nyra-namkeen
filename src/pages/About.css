@@ -22,6 +22,15 @@
     border: 2px solid #09343d; /* Optional: Add a border */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better emphasis */
   }
+
+  .story-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #387fa5;
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+  
   
   /* Heading Styling */
   .about-heading {

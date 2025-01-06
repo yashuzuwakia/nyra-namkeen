@@ -15,17 +15,24 @@ export default function About() {
       <p className="about-text">
         At <strong>Yashika Snacks Private Limited</strong>, we are passionate about crafting the finest namkeen mixtures that delight your taste buds and bring joy to your snacking experience. Under our brand name <strong>Nyra Namkeen</strong>, we proudly combine traditional recipes with modern techniques to offer you a perfect blend of taste, texture, and freshness.
       </p>
+      <h2 className="story-heading">Our Story</h2>
       <p className="about-text">
-        Our journey began with a simple yet ambitious vision: to create premium-quality snacks that connect with the heart and soul of India. Each product in the <strong>Nyra Namkeen</strong> range is crafted with care, using the finest ingredients and authentic flavors, ensuring a delicious experience in every bite.
+        It all started with a dream. Our journey began with <strong>Balmiky</strong>, a visionary and our dear friend, who always dreamed of creating something unique and meaningful back in our college days. From late-night brainstorming sessions in the hostel to endless cups of chai, his idea of crafting a namkeen mixture that would revolutionize taste stayed alive.
       </p>
       <p className="about-text">
-        We believe in more than just making snacks—we believe in creating moments of happiness for families and friends. Our tagline, <em>"Taste Nahi, Feelings Hai!"</em>, embodies our commitment to serving snacks that are not only delicious but also evoke cherished memories and emotions.
+        Years passed, and as software developers working in different cities, <strong>Rajat</strong>, <strong>Sudhanshu</strong>, <strong>Yashwant</strong>, and <strong>Balmiky</strong> decided to reunite and turn his dream into reality. With our collective skills, passion, and unwavering belief in his vision, we embarked on this incredible journey to bring a new taste to the world.
       </p>
       <p className="about-text">
-        With a focus on quality, innovation, and customer satisfaction, <strong>Nyra Namkeen</strong> is dedicated to becoming a household name in India and beyond. Whether it’s a tea-time gathering, a festive celebration, or a late-night craving, we’re here to make your moments special.
+        Combining Balmiky’s dream with our technical expertise, we built <strong>Nyra Namkeen</strong>—a brand that blends traditional flavors with a modern twist. We believe in more than just making snacks; we believe in creating moments of joy and connection. 
       </p>
       <p className="about-text">
-        Thank you for choosing <strong>Nyra Namkeen</strong>. We’re excited to be a part of your journey and look forward to serving you the best of Indian namkeen for years to come.
+        Every packet of <strong>Nyra Namkeen</strong> is a result of countless hours of hard work, love, and dedication from four friends who dared to dream big.
+      </p>
+      <p className="about-text">
+        Our tagline, <em>"Taste Nahi, Feelings Hai!"</em>, reflects the heart and soul we pour into every product. It’s not just namkeen; it’s a taste that connects with your emotions and brings back cherished memories.
+      </p>
+      <p className="about-text">
+        Thank you for being a part of our journey. We are excited to continue serving you the best of Indian namkeen for years to come.
       </p>
     </div>
   );
