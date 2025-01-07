@@ -2,10 +2,10 @@ import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 import "./Products.css";
-import productImg from "../assets/images/packet-design.png";
+import productImg from "../assets/images/packet.png";
 
 const Model = () => {
-  const { scene } = useGLTF("/assets/models/nyra.glb"); // Correct path
+  const { scene } = useGLTF("/assets/models/Nyra Namkeen.glb"); // Correct path
   return <primitive object={scene} scale={2} />;
 };
 
