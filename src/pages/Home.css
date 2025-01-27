@@ -1,9 +1,7 @@
 .home {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
     text-align: center; /* Center text */
     background-color: #f1f1f1; /* Optional: change background color */
   }
@@ -11,7 +9,7 @@
   .logo {
     width: 10rem; /* Adjust logo size */
     height: auto;
-    margin-bottom: 2rem; /* Add space below the logo */
+    margin: 20px 0 20px 0;
   }
   
   .cover {
@@ -22,6 +20,14 @@
     margin-bottom: 2rem; /* Space between cover image and text */
   }
   
+  .video {
+    width: 100%; /* Make the cover image full width */
+    height: auto;
+    max-height: 540px; /* Limit the height to a max value */
+    object-fit: cover; /* Ensure the image covers the space properly */
+    margin: 20px 0 0 0;
+}
+
   h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem; /* Space below the heading */
@@ -36,15 +42,11 @@
 
 /* Smaller logo on mobile screens */
 @media (max-width: 786px) {
-    .home{
-        margin-top: -88px;
-    }
+
   }
 
   
 /* Smaller logo on mobile screens */
 @media (max-width: 480px) {
-    .home{
-        margin-top: -116px;
-    }
+
   }

@@ -1,28 +1,25 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./Header.css";
 import logo from "../assets/images/logo.png";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   const [menuActive, setMenuActive] = useState(false);
-  const menyRef = useRef(null);
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768); // Detect initial screen width
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Update the state based on window size
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const toggleMenu = () => {
     setMenuActive(!menuActive);
   };
-
-  useEffect(()=>{
-    const handleClickOutside = (event) =>{
-      if(menyRef.current && !menyRef.current.contains(EventTarget.target)){
-        setMenuActive(false);
-      }
-    }
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [])
 
   return (
     <header className="header">
@@ -30,19 +27,23 @@ const Header = () => {
         <Link to="/" className="title">
           <img src={logo} alt="Nyra Namkeen" className="logo" />
         </Link>
-        <button className="menu-toggle" onClick={toggleMenu}>
+        {isMobile?(<button className="menu-toggle" onClick={toggleMenu}>
           ☰
-        </button>
-        <ul className={menuActive ? "active" : ""} ref={menyRef}>
-          <li>
-            <Link to="/products">Products</Link>
-          </li>
-          <li>
-            <Link to="/about">About Us</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
+        </button>): null}
+        <ul className={menuActive ? "active" : ""}>
+          {(menuActive || ! isMobile)?(
+            <>
+              <li onClick={toggleMenu}>
+                <Link to="/products">Products</Link>
+              </li>
+              <li onClick={toggleMenu}>
+                <Link to="/about">About Us</Link>
+              </li>
+              <li onClick={toggleMenu}>
+                <Link to="/contact">Contact</Link>
+              </li>
+            </>
+          ):null}
         </ul>
       </nav>
     </header>
