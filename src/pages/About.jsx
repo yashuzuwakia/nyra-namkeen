@@ -1,6 +1,7 @@
 import React from "react";
 import "./About.css";
 import logo from "../assets/images/logo.png"; // Adjust the path based on your project structure
+import cover from '../assets/images/finalcover.png'
 
 export default function About() {
   return (
@@ -15,6 +16,7 @@ export default function About() {
       <p className="about-text">
         At <strong>Yashika Snacks Private Limited</strong>, we are passionate about crafting the finest namkeen mixtures that delight your taste buds and bring joy to your snacking experience. Under our brand name <strong>Nyra Namkeen</strong>, we proudly combine traditional recipes with modern techniques to offer you a perfect blend of taste, texture, and freshness.
       </p>
+      <img src={cover} alt="" className='cover'/>
       <h2 className="story-heading">Our Story</h2>
       <p className="about-text">
         It all started with a dream. Our journey began with <strong>Balmiky</strong>, a visionary and our dear friend, who always dreamed of creating something unique and meaningful back in our college days. From late-night brainstorming sessions in the hostel to endless cups of chai, his idea of crafting a namkeen mixture that would revolutionize taste stayed alive.

@@ -2,7 +2,7 @@ import React from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 
-import productImg from "../assets/images/packet.png";
+import productImg from "../assets/images/mixture.png";
 import madrasi from "../assets/images/madrasi.png";
 import fire from "../assets/images/fire.png";
 

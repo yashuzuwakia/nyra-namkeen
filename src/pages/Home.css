@@ -13,11 +13,11 @@
   }
   
   .cover {
-    width: 100%; /* Make the cover image full width */
+    width: 80%; /* Make the cover image full width */
     height: auto;
-    max-height: 400px; /* Limit the height to a max value */
     object-fit: cover; /* Ensure the image covers the space properly */
-    margin-bottom: 2rem; /* Space between cover image and text */
+    margin: 10px 0 0 0; /* Space between cover image and text */
+    border-radius: 5px;
   }
   
   .video {
@@ -25,7 +25,7 @@
     height: auto;
     max-height: 540px; /* Limit the height to a max value */
     object-fit: cover; /* Ensure the image covers the space properly */
-    margin: 20px 0 0 0;
+    margin: 10px 0 0 0;
 }
 
   h1 {
