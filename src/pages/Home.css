@@ -1,52 +1,91 @@
 .home {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center; /* Center text */
-    background-color: #f1f1f1; /* Optional: change background color */
-  }
-  
-  .logo {
-    width: 10rem; /* Adjust logo size */
-    height: auto;
-    margin: 20px 0 20px 0;
-  }
-  
-  .cover {
-    width: 80%; /* Make the cover image full width */
-    height: auto;
-    object-fit: cover; /* Ensure the image covers the space properly */
-    margin: 10px 0 0 0; /* Space between cover image and text */
-    border-radius: 5px;
-  }
-  
-  .video {
-    width: 100%; /* Make the cover image full width */
-    height: auto;
-    max-height: 540px; /* Limit the height to a max value */
-    object-fit: cover; /* Ensure the image covers the space properly */
-    margin: 10px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Center text */
+  padding: 2rem 1rem; /* Add padding for better spacing */
+  background-color: #f1f1f1; /* Optional: change background color */
 }
 
+.logo {
+  width: 8rem; /* Adjust logo size */
+  height: auto;
+  margin: 20px 0; /* Vertical spacing for the logo */
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem; /* Space below the heading */
+  color: #09343d; /* Customize color as needed */
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem; /* Space below text */
+  color: #387fa5; /* Customize color as needed */
+}
+
+.cover {
+  width: 80%; /* Limit the cover image width */
+  max-width: 600px; /* Max width for larger screens */
+  height: auto;
+  object-fit: cover; /* Ensure the image scales properly */
+  margin: 20px 0; /* Space around the cover image */
+  border-radius: 5px; /* Smooth edges */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+}
+
+.video {
+  width: 90%; /* Video width to fit nicely on the page */
+  max-width: 800px; /* Limit max width on larger screens */
+  height: auto;
+  max-height: 540px; /* Limit the height to a max value */
+  object-fit: cover; /* Ensure the video scales properly */
+  margin: 20px 0; /* Space around the video */
+  border-radius: 5px; /* Smooth edges */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the video */
+}
+
+/* Responsive Design for Tablets */
+@media (max-width: 768px) {
+  .logo {
+    width: 6rem; /* Smaller logo size */
+  }
+
   h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem; /* Space below the heading */
-    color: #09343d; /* Customize color as needed */
+    font-size: 2rem; /* Reduce heading size */
   }
-  
+
   p {
-    font-size: 1.2rem;
-    color: #387fa5; /* Customize color as needed */
-  }
-  
-
-/* Smaller logo on mobile screens */
-@media (max-width: 786px) {
-
+    font-size: 1rem; /* Adjust paragraph size */
   }
 
-  
-/* Smaller logo on mobile screens */
+  .cover,
+  .video {
+    width: 90%; /* Increase width for smaller screens */
+  }
+}
+
+/* Responsive Design for Mobile */
 @media (max-width: 480px) {
-
+  .logo {
+    width: 5rem; /* Further reduce logo size */
   }
+
+  h1 {
+    font-size: 1.5rem; /* Reduce heading size for mobile */
+  }
+
+  p {
+    font-size: 0.9rem; /* Adjust paragraph size for mobile */
+  }
+
+  .cover {
+    width: 95%; /* Cover takes more screen width */
+  }
+
+  .video {
+    width: 95%; /* Video takes more screen width */
+  }
+}

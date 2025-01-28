@@ -13,7 +13,18 @@ const Home = () => {
       <h1>Welcome to Nyra Namkeen</h1>
       <p>Taste Nahi, Feelings Hai!</p>
       <img src={cover} alt="" className='cover'/>
-      <video src={video} className='video' autoPlay loop muted />
+      <video
+        src={video}
+        className="video"
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        disablePictureInPicture
+        controls={false}
+        controlsList="nodownload noplaybackrate"
+      />
     </div>
   );
 };
