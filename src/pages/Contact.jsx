@@ -11,10 +11,20 @@ export default function Contact() {
         <div className="contact-section">
           <h2>Connect with Us</h2>
           <div className="social-links">
-            <a href="https://youtube.com/@nyranamkeen?si=kU62v8Olp8QRFCU3" target="_blank" rel="noopener noreferrer" className="social-link youtube">
+            <a
+              href="https://youtube.com/@nyranamkeen?si=kU62v8Olp8QRFCU3"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link youtube"
+            >
               YouTube
             </a>
-            <a href="https://www.instagram.com/nyranamkeen" target="_blank" rel="noopener noreferrer" className="social-link instagram">
+            <a
+              href="https://www.instagram.com/nyranamkeen"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link instagram"
+            >
               Instagram
             </a>
           </div>
@@ -24,9 +34,8 @@ export default function Contact() {
         <div className="contact-section">
           <h2>Our Location</h2>
           <p>
-            Yashika Snacks Private Limited,  
-            Hiramani Niwas, Lakshmi Nagar, 
-            Kohara, Bihar, India.
+            Yashika Snacks Private Limited, Hiramani Niwas, Lakshmi Nagar,
+            Kohra, Jehanabad, Bihar 804227, India.
           </p>
         </div>
 
