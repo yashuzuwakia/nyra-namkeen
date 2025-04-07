@@ -34,7 +34,7 @@ export default function Contact() {
         <div className="contact-section">
           <h2>Our Location</h2>
           <p>
-            Yashika Snacks Private Limited, Hiramani Niwas, Lakshmi Nagar,
+            Yashika Foods & Snacks Enterprises, Hiramani Niwas, Lakshmi Nagar,
             Kohra, Jehanabad, Bihar 804227, India.
           </p>
         </div>

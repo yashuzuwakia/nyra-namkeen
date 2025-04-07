@@ -1,89 +1,103 @@
-/* Make the header sticky */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
+  /* Make the header sticky */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
 
-/* Navigation styles */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background: linear-gradient(to right, #09343d, #387fa5);
-}
-
-nav .menu-toggle{
-  display: none;
-}
-
-/* Title and logo */
-nav .title img {
-  width: 6rem;
-  height: auto;
-  margin: 0.5rem;
-}
-
-/* Menu links styles */
-nav ul {
-  display: flex; /* Always display the menu as flex */
-  gap: 1rem;
-  opacity: 1; /* Make the menu visible in desktop view */
-  transform: translateY(0); /* Ensure menu is not off-screen in desktop view */
-  transition: opacity 1s ease, transform 1s ease; /* Smooth transition for both opacity and transform */
-}
-
-nav ul li {
-  list-style: none;
-}
-
-nav ul li a {
-  display: block;
-  text-decoration: none;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  transition: background 0.3s;
-}
-
-nav ul li a:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-/* Media Query for responsiveness */
-@media (max-width: 768px) {
-  nav ul {
-    display: flex; /* Display menu as a column in mobile */
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: #09343d;
+  /* Navigation styles */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem;
-    width: 100%;
-    opacity: 0; /* Hide menu initially */
-    transform: translateY(-20px); /* Start slightly off-screen */
+    background: linear-gradient(to right, #02394b 50%, #005f7f);
   }
 
-  nav ul.active {
-    opacity: 1; /* Show the menu */
-    transform: translateY(0); /* Slide the menu into view */
+  nav .menu-toggle{
+    display: none;
   }
 
-  nav .menu-toggle {
-    display: block;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-  }
-}
-
-/* Smaller logo on mobile screens */
-@media (max-width: 480px) {
+  /* Title and logo */
   nav .title img {
-    width: 4.5rem;
+    width: 6rem;
+    height: auto;
+    margin: 0.5rem;
   }
-}
+
+  /* Menu links styles */
+  nav ul {
+    display: flex; /* Always display the menu as flex */
+    gap: 1rem;
+    opacity: 1; /* Make the menu visible in desktop view */
+    transform: translateY(0); /* Ensure menu is not off-screen in desktop view */
+    transition: opacity 1s ease, transform 1s ease; /* Smooth transition for both opacity and transform */
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  nav ul li {
+    list-style: none;
+  }
+
+  nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background 0.3s;
+  }
+
+  nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  /* Media Query for responsiveness */
+  @media (max-width: 768px) {
+    nav ul {
+      display: flex; /* Display menu as a column in mobile */
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #09343d;
+      padding: 1rem;
+      width: 100%;
+      opacity: 0; /* Hide menu initially */
+      transform: translateY(-20px); /* Start slightly off-screen */
+    }
+
+    
+
+    .header {
+      height: 70px; /* Adjust height if needed */
+    }
+
+    .home, .about-container {
+      padding-top: 80px; /* Ensure sections are visible below header */
+    }
+
+    nav ul.active {
+      opacity: 1; /* Show the menu */
+      transform: translateY(0); /* Slide the menu into view */
+      margin-top: 55px;
+    }
+
+    nav .menu-toggle {
+      display: block;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  }
+
+  /* Smaller logo on mobile screens */
+  @media (max-width: 480px) {
+    nav .title img {
+      width: 4.5rem;
+    }
+  }

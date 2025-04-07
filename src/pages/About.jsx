@@ -12,7 +12,7 @@ export default function About() {
       <h1 className="about-heading">About Us</h1>
       <p className="about-text">
         <center>
-          Welcome to <strong>Yashika Snacks Private Limited</strong>
+          Welcome to <strong>Yashika Foods & Snacks Enterprises</strong>
         </center>
       </p>
       <p className="about-text">

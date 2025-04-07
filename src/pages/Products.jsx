@@ -1,18 +1,18 @@
 import React from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, useGLTF } from "@react-three/drei";
+//import { Canvas } from "@react-three/fiber";
+//import { OrbitControls, useGLTF } from "@react-three/drei";
 
-import productImg from "../assets/images/mixture.png";
+import namkeen from "../assets/images/namkeen.png";
 import madrasi from "../assets/images/madrasi.png";
-import fire from "../assets/images/fire.png";
+import jhal from "../assets/images/jhal.png";
 
 import "./Products.css";
 
 // Component for 3D Model
-const Model = () => {
-  const { scene } = useGLTF("/assets/models/Nyra Namkeen.glb"); // Correct path
-  return <primitive object={scene} scale={2} />;
-};
+// const Model = () => {
+//   const { scene } = useGLTF("/assets/models/Nyra Namkeen.glb"); // Correct path
+//   return <primitive object={scene} scale={2} />;
+// };
 
 // Products array
 const products = [
@@ -22,7 +22,7 @@ const products = [
     description:
       "Our signature namkeen blend crafted with the finest ingredients to deliver a perfect balance of spices and crunch. Ideal for every occasion, this timeless mixture is a treat for your taste buds.",
     price: "₹100",
-    image: productImg,
+    image: namkeen,
     hasModel: true, // Indicates if the product has a 3D model
   },
   {
@@ -31,7 +31,7 @@ const products = [
     description:
       "Spicy and bold, this namkeen is perfect for those who crave an extra kick in every bite. Made with high-quality ingredients to ensure the perfect blend of flavor and heat.",
     price: "₹120",
-    image: fire,
+    image: jhal,
     hasModel: false, // No 3D model
   },
   {
@@ -68,7 +68,7 @@ export default function Products() {
               <p className="product-price">{product.price}</p>
             </div>
 
-            {/* Right Section: 3D Model (conditionally rendered) */}
+            {/* Right Section: 3D Model (conditionally rendered)
             {product.hasModel && (
               <div className="product-model-container">
                 <Canvas>
@@ -78,7 +78,7 @@ export default function Products() {
                   <OrbitControls />
                 </Canvas>
               </div>
-            )}
+            )} */}
           </div>
         </div>
       ))}
