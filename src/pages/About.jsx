@@ -41,28 +41,6 @@ export default function About() {
       <img src={cover} alt="" className="cover" />
       <h2 className="story-heading">Our Story</h2>
       <p className="about-text">
-        It all started with a dream. Our journey began with{" "}
-        <strong>Balmiky</strong>, a visionary and our dear friend, who always
-        dreamed of creating something unique and meaningful back in our college
-        days. From late-night brainstorming sessions in the hostel to endless
-        cups of chai, his idea of crafting a namkeen mixture that would
-        revolutionize taste stayed alive.
-      </p>
-      <p className="about-text">
-        Years passed, and as software developers working in different cities,{" "}
-        <strong>Rajat</strong>, <strong>Sudhanshu</strong>,{" "}
-        <strong>Yashwant</strong>, and <strong>Balmiky</strong> decided to
-        reunite and turn his dream into reality. With our collective skills,
-        passion, and unwavering belief in his vision, we embarked on this
-        incredible journey to bring a new taste to the world.
-      </p>
-      <p className="about-text">
-        Combining Balmiky’s dream with our technical expertise, we built{" "}
-        <strong>Nyra Namkeen</strong>—a brand that blends traditional flavors
-        with a modern twist. We believe in more than just making snacks; we
-        believe in creating moments of joy and connection.
-      </p>
-      <p className="about-text">
         Every packet of <strong>Nyra Namkeen</strong> is a result of countless
         hours of hard work, love, and dedication from four friends who dared to
         dream big.
