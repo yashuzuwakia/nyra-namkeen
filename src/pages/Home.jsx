@@ -1,60 +1,24 @@
-import React, { useRef } from "react";
-
-import logo from "../assets/images/logo.png";
-import video from "../assets/videos/video.MP4";
-import cover from "../assets/images/finalcover.png";
-
-import "./Home.css";
-import About from "./About";
-import Products from "./Products";
-import Contact from "./Contact";
-import Header from "../components/Header";
+import React from "react";
+import SiteChrome from "../components/SiteChrome";
 import Footer from "../components/Footer";
+import Hero from "../components/Hero";
+import Products from "./Products";
+import LegacySection from "../components/LegacySection";
+import WhyChoose from "../components/WhyChoose";
+import Contact from "./Contact";
 
-const Home = () => {
-  const homeRef = useRef(null);
-  const productRef = useRef(null);
-  const aboutRef = useRef(null);
-  const contactRef = useRef(null);
-
+export default function Home() {
   return (
     <>
-      <Header
-        homeRef={homeRef}
-        productRef={productRef}
-        aboutRef={aboutRef}
-        contactRef={contactRef}
-      />
-      <div className="home" ref={homeRef}>
-        <img src={logo} alt="" className="logo" />
-        <h1>Welcome to Nyra Namkeen</h1>
-        <p>Taste Nahi, Feelings Hai!</p>
-        <img src={cover} alt="" className="cover" />
-        <video
-          src={video}
-          className="video"
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          disablePictureInPicture
-          controls={false}
-          controlsList="nodownload noplaybackrate"
-        />
-      </div>
-      <div ref={productRef}>
+      <SiteChrome />
+      <main>
+        <Hero />
         <Products />
-      </div>
-      <div ref={aboutRef}>
-        <About />
-      </div>
-      <div ref={contactRef}>
+        <LegacySection />
+        <WhyChoose />
         <Contact />
-      </div>
+      </main>
       <Footer />
     </>
   );
-};
-
-export default Home;
+}

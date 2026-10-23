@@ -1,101 +1,124 @@
-/* Main Container */
-.contact-container {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 1.5rem;
-    background: linear-gradient(to right, #f9f9f9, #ffffff);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.contact {
+  background: var(--color-surface-elevated);
+}
+
+.contact__banner {
+  background: var(--color-navy);
+  color: #fff;
+  border-bottom: 3px solid var(--color-gold);
+  text-align: center;
+  padding: clamp(2rem, 5vw, 2.5rem) var(--page-padding-x);
+}
+
+.contact__banner h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 0.35rem;
+}
+
+.contact__banner p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+}
+
+.contact__inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 2rem var(--page-padding-x) var(--section-padding-y);
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .contact__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  /* Heading Styles */
-  .contact-heading {
-    font-size: 2.5rem;
-    color: #09343d;
-    text-align: center;
-    margin-bottom: 2rem;
-    font-weight: bold;
+}
+
+@media (min-width: 1024px) {
+  .contact__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  /* Section Styles */
-  .contact-section {
-    margin-bottom: 2rem;
-  }
-  
-  .contact-section h2 {
-    font-size: 1.5rem;
-    color: #387fa5;
-    margin-bottom: 1rem;
-  }
-  
-  .contact-section p {
-    font-size: 1rem;
-    color: #333;
-    line-height: 1.6;
-  }
-  
-  /* Social Media Links */
-  .social-links {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-  }
-  
-  .social-link {
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    color: white;
-    transition: background 0.3s ease;
-  }
-  
-  .social-link.youtube {
-    background: #ff0000;
-  }
-  
-  .social-link.instagram {
-    background: #c13584;
-  }
-  
-  .social-link:hover {
-    opacity: 0.8;
-  }
-  
-  /* Map Container */
-  .map-container {
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .contact-container {
-      padding: 1rem;
-    }
-  
-    .contact-heading {
-      font-size: 2rem;
-    }
-  
-    .contact-section h2 {
-      font-size: 1.3rem;
-    }
-  
-    .social-link {
-      font-size: 0.9rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .contact-heading {
-      font-size: 1.8rem;
-    }
-  
-    .social-link {
-      font-size: 0.8rem;
-      padding: 0.3rem 0.8rem;
-    }
-  }
-  
+}
+
+.contact__card {
+  padding: 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-cream);
+}
+
+.contact__card h3 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-gold-dark);
+  margin-bottom: 1rem;
+}
+
+.contact__card p {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.contact__card a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact__card a:hover {
+  color: var(--color-brand);
+}
+
+.contact__address {
+  margin-top: 0.5rem !important;
+  line-height: 1.5;
+}
+
+.contact__social {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.contact__social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact__social a:hover {
+  color: var(--color-brand);
+}
+
+.contact__card--wide {
+  grid-column: 1 / -1;
+}
+
+.contact__map {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  max-height: 280px;
+  border: 1px solid var(--color-border);
+}
+
+.contact__map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}

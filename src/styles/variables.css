@@ -1,0 +1,62 @@
+:root {
+  /* Nyra pack: deep navy + royal gold */
+  --color-navy: #0e3554;
+  --color-navy-deep: #071f33;
+  --color-navy-mid: #1a4a6e;
+
+  --color-gold: #c9a227;
+  --color-gold-bright: #e8c547;
+  --color-gold-pale: #f5e6b8;
+  --color-gold-dark: #9a7b1a;
+
+  --color-brand: var(--color-navy);
+  --color-brand-dark: var(--color-navy-deep);
+  --color-brand-light: var(--color-navy-mid);
+  --color-gold-light: var(--color-gold-pale);
+
+  --color-cream: #faf7f0;
+  --color-cream-dark: #ebe4d4;
+
+  --color-primary: var(--color-navy-deep);
+  --color-primary-light: var(--color-navy-mid);
+  --color-accent: var(--color-gold);
+  --color-accent-soft: var(--color-gold-pale);
+  --color-secondary: var(--color-navy);
+  --color-secondary-dark: var(--color-navy-deep);
+
+  --color-surface: var(--color-cream);
+  --color-surface-elevated: #ffffff;
+  --color-text: #0f2433;
+  --color-text-muted: #4a5f6f;
+  --color-border: rgba(14, 53, 84, 0.14);
+
+  --font-display: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+
+  --topbar-height: 2.25rem;
+  --header-height: 5.6rem;
+  --header-logo-size: clamp(3.25rem, 10vw, 4.35rem);
+  --header-offset: calc(var(--topbar-height) + var(--header-height));
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --shadow-sm: 0 2px 8px rgba(7, 31, 51, 0.06);
+  --shadow-md: 0 10px 28px rgba(7, 31, 51, 0.1);
+  --shadow-lg: 0 20px 48px rgba(7, 31, 51, 0.12);
+
+  --section-padding-y: clamp(2.5rem, 6vw, 4.5rem);
+  --container-max: 76rem;
+  --page-padding-x: clamp(1rem, 3.5vw, 1.5rem);
+  --touch-min: 2.75rem;
+
+  --gradient-pack: linear-gradient(
+    180deg,
+    var(--color-navy-deep) 0%,
+    var(--color-navy) 35%,
+    var(--color-gold-dark) 35.2%,
+    var(--color-gold-bright) 38%,
+    var(--color-navy) 38.2%,
+    var(--color-navy-deep) 100%
+  );
+}

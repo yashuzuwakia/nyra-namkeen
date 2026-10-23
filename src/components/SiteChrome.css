@@ -1,0 +1,12 @@
+.site-chrome {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+
+.site-chrome .header {
+  position: relative;
+  top: auto;
+  border-bottom: 3px solid var(--color-gold);
+}

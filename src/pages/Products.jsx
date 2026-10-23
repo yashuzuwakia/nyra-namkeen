@@ -1,87 +1,49 @@
-import React from "react";
-//import { Canvas } from "@react-three/fiber";
-//import { OrbitControls, useGLTF } from "@react-three/drei";
-
-import namkeen from "../assets/images/namkeen.png";
-import madrasi from "../assets/images/madrasi.png";
-import jhal from "../assets/images/jhal.png";
-
+import React, { useMemo, useState } from "react";
+import { products, STAR_PRODUCT_ID } from "../data/products";
+import ProductCard from "../components/ProductCard";
+import CategoryStrip from "../components/CategoryStrip";
+import StarProduct from "../components/StarProduct";
+import { useScroll } from "../context/ScrollContext";
 import "./Products.css";
 
-// Component for 3D Model
-// const Model = () => {
-//   const { scene } = useGLTF("/assets/models/Nyra Namkeen.glb"); // Correct path
-//   return <primitive object={scene} scale={2} />;
-// };
-
-// Products array
-const products = [
-  {
-    id: 1,
-    name: "Classic Mixture",
-    description:
-      "Our signature namkeen blend crafted with the finest ingredients to deliver a perfect balance of spices and crunch. Ideal for every occasion, this timeless mixture is a treat for your taste buds.",
-    price: "₹100",
-    image: namkeen,
-    hasModel: true, // Indicates if the product has a 3D model
-  },
-  {
-    id: 2,
-    name: "The Fiery One",
-    description:
-      "Spicy and bold, this namkeen is perfect for those who crave an extra kick in every bite. Made with high-quality ingredients to ensure the perfect blend of flavor and heat.",
-    price: "₹120",
-    image: jhal,
-    hasModel: false, // No 3D model
-  },
-  {
-    id: 3,
-    name: "The Flavour of Madras",
-    description:
-      "Experience the authentic taste of South India with our Madras-inspired namkeen. Bursting with flavors of curry leaves, mustard seeds, and traditional spices.",
-    price: "₹110",
-    image: madrasi,
-    hasModel: false, // No 3D model
-  },
-];
-
 export default function Products() {
+  const { refs } = useScroll();
+  const [category, setCategory] = useState("all");
+
+  const filtered = useMemo(() => {
+    let list = products.filter((p) => p.id !== STAR_PRODUCT_ID);
+    if (category !== "all") {
+      list = list.filter((p) => p.category === category);
+    }
+    return list;
+  }, [category]);
+
   return (
     <>
-      {products.map((product) => (
-        <div className="single-product-container" key={product.id}>
-          <h1 className="product-heading">{product.name}</h1>
-          <div className="product-details">
-            {/* Left Section: Image */}
-            <div className="product-image-container">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="product-image"
-              />
-            </div>
-
-            {/* Center Section: Product Information */}
-            <div className="product-info">
-              <h2 className="product-name">{product.name}</h2>
-              <p className="product-description">{product.description}</p>
-              <p className="product-price">{product.price}</p>
-            </div>
-
-            {/* Right Section: 3D Model (conditionally rendered)
-            {product.hasModel && (
-              <div className="product-model-container">
-                <Canvas>
-                  <ambientLight intensity={3} />
-                  <directionalLight position={[5, 5, 5]} />
-                  <Model />
-                  <OrbitControls />
-                </Canvas>
-              </div>
-            )} */}
+      <StarProduct />
+      <CategoryStrip activeCategory={category} onSelect={setCategory} />
+      <section
+        className="shop"
+        ref={refs.productsRef}
+        id="products"
+        aria-labelledby="shop-title"
+      >
+        <div className="shop__inner">
+          <header className="shop__header">
+            <p className="shop__eyebrow">Retail packs</p>
+            <h2 id="shop-title" className="shop__title">Namkeen packets</h2>
+            <p className="shop__subtitle">
+              Pouch-style packs as sold in store — mixture is our current star
+              product. Enquire for distribution and bulk orders.
+            </p>
+          </header>
+          <div className="shop__grid">
+            {filtered.map((product) => (
+              <ProductCard key={product.id} {...product} />
+            ))}
           </div>
         </div>
-      ))}
+      </section>
     </>
   );
 }

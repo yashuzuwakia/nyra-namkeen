@@ -1,67 +1,73 @@
 import React from "react";
+import { FaInstagram, FaYoutube, FaPhone, FaEnvelope } from "react-icons/fa";
+import { SITE } from "../constants/site";
+import { useScroll } from "../context/ScrollContext";
 import "./Contact.css";
 
+const MAP_EMBED =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.115278772479!2d84.983243!3d25.1317932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f2cba7c6bc8745%3A0x2cbb0cd994f51fb0!2sYashika%20Snacks%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1736023662159!5m2!1sen!2sin";
+
 export default function Contact() {
+  const { refs } = useScroll();
+
   return (
-    <div className="contact-container">
-      <h1 className="contact-heading">Contact Us</h1>
-
-      <div className="contact-info">
-        {/* Social Media Links */}
-        <div className="contact-section">
-          <h2>Connect with Us</h2>
-          <div className="social-links">
-            <a
-              href="https://youtube.com/@nyranamkeen?si=kU62v8Olp8QRFCU3"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link youtube"
-            >
-              YouTube
-            </a>
-            <a
-              href="https://www.instagram.com/nyranamkeen"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link instagram"
-            >
-              Instagram
-            </a>
+    <section
+      className="contact"
+      ref={refs.contactRef}
+      id="contact"
+      aria-labelledby="contact-title"
+    >
+      <div className="contact__banner">
+        <h2 id="contact-title">Get in touch</h2>
+        <p>Orders, distribution, and partnerships — we&apos;re happy to help.</p>
+      </div>
+      <div className="contact__inner">
+        <div className="contact__grid">
+          <div className="contact__card">
+            <h3>Contact details</h3>
+            <p>
+              <FaPhone aria-hidden />
+              <a href={`tel:${SITE.phone.replace(/\s/g, "")}`}>{SITE.phone}</a>
+            </p>
+            <p>
+              <FaEnvelope aria-hidden />
+              <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+            </p>
+            <p className="contact__address">{SITE.address}</p>
           </div>
-        </div>
-
-        {/* Location */}
-        <div className="contact-section">
-          <h2>Our Location</h2>
-          <p>
-            Yashika Foods & Snacks Enterprises, Hiramani Niwas, Lakshmi Nagar,
-            Kohra, Jehanabad, Bihar 804227, India.
-          </p>
-        </div>
-
-        {/* Map */}
-        <div className="contact-section">
-          <h2>Find Us on Map</h2>
-          <div className="map-container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.115278772479!2d84.983243!3d25.1317932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f2cba7c6bc8745%3A0x2cbb0cd994f51fb0!2sYashika%20Snacks%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1736023662159!5m2!1sen!2sin"
-              width="100%"
-              height="300"
-              style={{ border: "0" }}
-              allowFullScreen=""
-              loading="lazy"
-              title="Company Location"
-            ></iframe>
+          <div className="contact__card">
+            <h3>Follow {SITE.name}</h3>
+            <div className="contact__social">
+              <a
+                href={SITE.social.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaYoutube /> YouTube
+              </a>
+              <a
+                href={SITE.social.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram /> Instagram
+              </a>
+            </div>
           </div>
-        </div>
-
-        {/* Contact Details */}
-        <div className="contact-section">
-          <h2>Contact Details</h2>
-          <p>📞 Phone: +91 7050273011</p>
-          <p>✉️ Email: nyranamkeen@gmail.com</p>
+          <div className="contact__card contact__card--wide">
+            <h3>Visit us</h3>
+            <div className="contact__map">
+              <iframe
+                src={MAP_EMBED}
+                title="Yashika Snacks location"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

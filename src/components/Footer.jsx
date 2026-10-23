@@ -1,78 +1,83 @@
 import React from "react";
-import "./Footer.css";
 import {
   FaFacebook,
   FaInstagram,
   FaYoutube,
   FaMapMarkerAlt,
   FaEnvelope,
+  FaPhoneAlt,
 } from "react-icons/fa";
+import logo from "../assets/images/logo.png";
+import { SITE } from "../constants/site";
+import { useScroll } from "../context/ScrollContext";
+import "./Footer.css";
 
 export default function Footer() {
+  const { scrollToAbout, scrollToProducts, scrollToContact, scrollToHome } =
+    useScroll();
+
   return (
     <footer className="footer">
-      <div className="footer-content">
-        <div className="footer-section about">
-          <h2>Nyra Namkeen</h2>
-          <p>
-            Bringing you the finest namkeen blends that connect with the heart
-            of India. Taste Nahi, Feelings Hai!
-          </p>
+      <div className="footer__newsletter">
+        <div className="footer__newsletter-inner">
+          <div>
+            <h2>Stay connected with {SITE.name}</h2>
+            <p>Follow us for recipes, offers, and behind-the-scenes from our kitchen.</p>
+          </div>
+          <a
+            className="footer__newsletter-btn"
+            href={SITE.social.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Follow on Instagram
+          </a>
         </div>
-        <div className="footer-section links">
-          <h3>Quick Links</h3>
+      </div>
+      <div className="footer__main">
+        <div className="footer__brand-col">
+          <button type="button" className="footer__logo-btn" onClick={scrollToHome}>
+            <img src={logo} alt="" width={64} height={64} />
+            <span>{SITE.name}</span>
+          </button>
+          <p>{SITE.tagline}</p>
+        </div>
+        <div className="footer__col">
+          <h3>Shop</h3>
           <ul>
-            <li>
-              <a href="/about">About Us</a>
-            </li>
-            <li>
-              <a href="/products">Products</a>
-            </li>
-            <li>
-              <a href="/contact">Contact Us</a>
-            </li>
+            <li><button type="button" onClick={scrollToProducts}>All products</button></li>
+            <li><button type="button" onClick={scrollToProducts}>Mixture</button></li>
+            <li><button type="button" onClick={scrollToProducts}>Bhujia sev</button></li>
+            <li><button type="button" onClick={scrollToProducts}>Moong dal</button></li>
           </ul>
         </div>
-        <div className="footer-section social">
-          <h3>Follow Us</h3>
-          <div className="social-icons">
-            <a
-              href="https://www.facebook.com/share/18gwv7QeG8/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+        <div className="footer__col">
+          <h3>Company</h3>
+          <ul>
+            <li><button type="button" onClick={scrollToAbout}>Our story</button></li>
+            <li><button type="button" onClick={scrollToContact}>Contact</button></li>
+          </ul>
+        </div>
+        <div className="footer__col">
+          <h3>Reach us</h3>
+          <p><FaMapMarkerAlt aria-hidden /> {SITE.location}</p>
+          <p><FaPhoneAlt aria-hidden /> {SITE.phone}</p>
+          <p><FaEnvelope aria-hidden /> {SITE.email}</p>
+          <div className="footer__social">
+            <a href={SITE.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
               <FaFacebook />
             </a>
-            <a
-              href="https://www.instagram.com/nyranamkeen"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={SITE.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <FaInstagram />
             </a>
-            <a
-              href="https://youtube.com/@nyranamkeen?si=kU62v8Olp8QRFCU3"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={SITE.social.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube">
               <FaYoutube />
             </a>
           </div>
         </div>
-        <div className="footer-section contact">
-          <h3>Contact</h3>
-          <p>
-            <FaMapMarkerAlt /> Jehanabad, Bihar, India
-          </p>
-          <p>
-            <FaEnvelope /> nyranamkeen@gmail.com
-          </p>
-        </div>
       </div>
-      <div className="footer-bottom">
-        <p>
-          &copy; 2025 Yashika Foods & Snacks Enterprises All Rights Reserved.
-        </p>
+      <div className="footer__bottom">
+        <p>&copy; {new Date().getFullYear()} {SITE.company}. All rights reserved.</p>
       </div>
     </footer>
   );

@@ -1,0 +1,24 @@
+/* Shared responsive tokens (used in component CSS via matching breakpoints) */
+
+@media (max-width: 1024px) {
+  :root {
+    --header-height: 5.15rem;
+    --header-logo-size: clamp(3.1rem, 11vw, 3.85rem);
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --topbar-height: 2rem;
+    --header-height: 4.65rem;
+    --header-logo-size: clamp(3rem, 12vw, 3.5rem);
+    --section-padding-y: clamp(2rem, 8vw, 3rem);
+  }
+}
+
+@media (max-width: 380px) {
+  :root {
+    --header-height: 4.4rem;
+    --header-logo-size: 2.9rem;
+  }
+}

@@ -1,0 +1,7 @@
+Replace these three files with your real pouch photos (keep the same names):
+
+  mixture-packet.jpg   — Nyra Namkeen Mixture (star product)
+  bhujia-sev-packet.jpg — Bhujia Sev pack
+  moong-dal-packet.jpg  — Moong Dal pack
+
+After copying, refresh the browser. No code changes needed.
