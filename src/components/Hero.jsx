@@ -8,21 +8,21 @@ import "./Hero.css";
 const SLIDES = [
   {
     id: 1,
+    eyebrow: SITE.tagline,
+    title: "Mixture Namkeen, Bhujia sev & moong dal packs",
+    text: "Authentic Indian namkeen pouches — perfect for kirana, gifting, and everyday snacking.",
+    image: cover,
+    imageClass: "",
+    cta: "View all packs",
+  },
+  {
+    id: 2,
     eyebrow: "Star product · Mixture",
     title: "Premium namkeen mixture",
     text: "Our bestselling retail pack — crispy, delicious, and made with natural ingredients.",
     image: PACKET_IMAGES.mixture,
     imageClass: "hero__image--pack",
     cta: "Shop mixture",
-  },
-  {
-    id: 2,
-    eyebrow: SITE.tagline,
-    title: "Bhujia sev & moong dal packs",
-    text: "Authentic Indian namkeen pouches — perfect for kirana, gifting, and everyday snacking.",
-    image: cover,
-    imageClass: "",
-    cta: "View all packs",
   },
 ];
 
@@ -46,7 +46,11 @@ export default function Hero() {
           <p className="hero__eyebrow">{slide.eyebrow}</p>
           <h1 className="hero__title">{slide.title}</h1>
           <p className="hero__text">{slide.text}</p>
-          <button type="button" className="hero__cta" onClick={scrollToProducts}>
+          <button
+            type="button"
+            className="hero__cta"
+            onClick={scrollToProducts}
+          >
             {slide.cta}
           </button>
           <div className="hero__dots" role="tablist" aria-label="Hero slides">
